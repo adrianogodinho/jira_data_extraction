@@ -16,7 +16,7 @@ JIRA_ACCOUNT_ID_MAP = {
 }
 
 
-class JIRABEESOEExtractor:
+class JIRADataExtractor:
 
     def __init__(self):
         self.client = JIRA(server='https://ab-inbev.atlassian.net/',
@@ -93,7 +93,7 @@ class JIRADataPersist:
                     file.write(account_row + '\n')
 
 
-contentExtractor = JIRABEESOEExtractor()
+contentExtractor = JIRADataExtractor()
 contentPersistent = JIRADataPersist()
 
 page = 0
